@@ -1,0 +1,21 @@
+c:\users\10525\documents\visual studio 2015\Projects\ChatSqlServer\ChatSqlServer\bin\Debug\ChatSqlServer.exe.config
+c:\users\10525\documents\visual studio 2015\Projects\ChatSqlServer\ChatSqlServer\bin\Debug\ChatSqlServer.exe
+c:\users\10525\documents\visual studio 2015\Projects\ChatSqlServer\ChatSqlServer\bin\Debug\ChatSqlServer.pdb
+c:\users\10525\documents\visual studio 2015\Projects\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.csprojResolveAssemblyReference.cache
+c:\users\10525\documents\visual studio 2015\Projects\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.Form1.resources
+c:\users\10525\documents\visual studio 2015\Projects\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.Login.resources
+c:\users\10525\documents\visual studio 2015\Projects\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.Properties.Resources.resources
+c:\users\10525\documents\visual studio 2015\Projects\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.csproj.GenerateResource.Cache
+c:\users\10525\documents\visual studio 2015\Projects\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.exe
+c:\users\10525\documents\visual studio 2015\Projects\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.pdb
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\bin\Debug\ChatSqlServer.exe.config
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\bin\Debug\ChatSqlServer.exe
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\bin\Debug\ChatSqlServer.pdb
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.csprojAssemblyReference.cache
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.Form1.resources
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.Login.resources
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.Properties.Resources.resources
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.csproj.GenerateResource.cache
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.csproj.CoreCompileInputs.cache
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.exe
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.pdb

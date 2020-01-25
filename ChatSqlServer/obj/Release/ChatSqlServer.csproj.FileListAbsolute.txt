@@ -1,0 +1,11 @@
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\bin\Release\ChatSqlServer.exe.config
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\bin\Release\ChatSqlServer.exe
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\bin\Release\ChatSqlServer.pdb
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Release\ChatSqlServer.Form1.resources
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Release\ChatSqlServer.Login.resources
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Release\ChatSqlServer.Properties.Resources.resources
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Release\ChatSqlServer.csproj.GenerateResource.cache
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Release\ChatSqlServer.csproj.CoreCompileInputs.cache
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Release\ChatSqlServer.exe
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Release\ChatSqlServer.pdb
+C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Release\ChatSqlServer.csprojAssemblyReference.cache
