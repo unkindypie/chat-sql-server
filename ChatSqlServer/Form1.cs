@@ -20,9 +20,14 @@ namespace ChatSqlServer
         float averageFontSize = 8;
         string linkedFileName = null;
         List<Message> messages = new List<Message>();
+        Dictionary<string, Image> emojis = new Dictionary<string, Image>();
         public Form1()
         {
             InitializeComponent();
+            emojis.Add("smile", Properties.Resources.smile1_30);
+            emojis.Add("angry", Properties.Resources.smile2_30);
+            emojis.Add("moon", Properties.Resources.smile3_30);
+            emojis.Add("monkey", Properties.Resources.smile4_30);
         }
 
         public Image byteArrayToImage(byte[] bytesArr)
@@ -138,13 +143,13 @@ namespace ChatSqlServer
                 lastMessagesSize = messages.Count;
                 //отправляю сообщение + сразу же отрисовываю его, т.к. я уже знаю его содержимое и мне не нужно
                 //ждать, пока сервер мне его отправит
-                messages.Add(Model.Self.sendMessage(new Message(textBox2.Text, user, linkedFile)));
+                messages.Add(Model.Self.sendMessage(new Message(inputBox.Text, user, linkedFile)));
                
                 resizeFont();
 
                 fillTextBox(true);
-                textBox2.Text = "";
-                textBox2.Focus();
+                inputBox.Text = "";
+                inputBox.Focus();
             }
         }
 
@@ -228,6 +233,16 @@ namespace ChatSqlServer
             //clipboard, то мне нужно как-то иначе не дать пользователю вводить сюда данные, так что я просто
             //меняю фокус на другой элемент
             button1.Focus();
+        }
+
+        void insertEmoji(RichTextBox rtb, string emojiKey)
+        {
+            rtb.AppendText($"zzX{emojiKey}Xzz");
+        }
+
+        private void sm1_button_Click(object sender, EventArgs e)
+        {
+            insertEmoji(inputBox, "smile");
         }
     }
 }

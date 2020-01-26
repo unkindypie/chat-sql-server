@@ -63,9 +63,9 @@ namespace ChatSqlServer.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap skrepka {
+        internal static System.Drawing.Bitmap skrepka_60 {
             get {
-                object obj = ResourceManager.GetObject("skrepka", resourceCulture);
+                object obj = ResourceManager.GetObject("skrepka_60", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,39 @@ namespace ChatSqlServer.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap skrepka_60 {
+        internal static System.Drawing.Bitmap smile1_30 {
             get {
-                object obj = ResourceManager.GetObject("skrepka_60", resourceCulture);
+                object obj = ResourceManager.GetObject("smile1_30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap smile2_30 {
+            get {
+                object obj = ResourceManager.GetObject("smile2_30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap smile3_30 {
+            get {
+                object obj = ResourceManager.GetObject("smile3_30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap smile4_30 {
+            get {
+                object obj = ResourceManager.GetObject("smile4_30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
