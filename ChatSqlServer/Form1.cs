@@ -34,39 +34,44 @@ namespace ChatSqlServer
             }
         }
         void fillTextBox(bool sizeChanged)
-        { 
+        {
             //если размер сообщений остался прежним с последнего вызова, то можно ничего не рисовать
             //но только в том случае, если этот метод был вызван не для масштабирования текста
-            if (!sizeChanged && lastMessagesSize == messages.Count)
+            Debug.WriteLine(lastMessagesSize);
+            Debug.WriteLine(messages.Count);
+            if (!sizeChanged && lastMessagesSize >= messages.Count)
             {
                 return;
             }
+            lastMessagesSize = messages.Count;
             chatBox.Text = "";
             foreach (Message m in messages)
             {
-               
+
                 string userNameString = " <" + m.user.ToString() + ">\n";
                 string messageString = " \t" + m.text + "\n";
                 chatBox.AppendText(userNameString);
                 chatBox.Select(chatBox.TextLength - userNameString.Length, userNameString.Length - 1);
-                chatBox.SelectionFont = new Font(chatBox.Font.FontFamily, averageFontSize + 3, FontStyle.Underline);
+                chatBox.SelectionFont = new Font(chatBox.Font.FontFamily, averageFontSize, FontStyle.Underline);
                 chatBox.SelectionColor = Color.Purple;
                 chatBox.AppendText(messageString);
                 chatBox.Select(chatBox.TextLength - messageString.Length, messageString.Length - 1);
 
-                chatBox.SelectionFont = new Font(chatBox.Font.FontFamily, averageFontSize + 1, FontStyle.Regular);
+                chatBox.SelectionFont = new Font(chatBox.Font.FontFamily, averageFontSize, FontStyle.Regular);
                 chatBox.SelectionColor = Color.Black;
 
                 if (m.file != null)
                 {
-                    Debug.WriteLine(m.file.data[0]);
-                    Image image = byteArrayToImage(m.file.data);
-                    Clipboard.SetImage(image);
-                    chatBox.Paste(DataFormats.GetFormat(DataFormats.Bitmap));
+                    //вставляю картинку(простых способ без использования Clipboard нет)
+                    var b = new Bitmap(new MemoryStream(m.file.data));
+                    b = new Bitmap(b, new Size(150, 150));
+                    Clipboard.SetImage(b);
+                    chatBox.Paste();
+                    Clipboard.Clear();
                 } 
             }
 
-            chatBox.Select(chatBox.TextLength, 1);
+            chatBox.Select(chatBox.TextLength, 0);
             chatBox.ScrollToCaret();
 
         }
@@ -91,6 +96,7 @@ namespace ChatSqlServer
             }
             else
             {
+                Text += " " + Model.Self.address;
                 //получаю сообщения с сервера в первый раз
                 messages = await Model.Self.getMessages(null);
                 resizeFont();
@@ -126,6 +132,7 @@ namespace ChatSqlServer
                 {
                     byte[] blob = File.ReadAllBytes(linkedFileName);
                     linkedFile = new FileModel(blob, 0);
+                    linkedFileName = null;
                 }
 
                 lastMessagesSize = messages.Count;
@@ -155,8 +162,13 @@ namespace ChatSqlServer
             {
                 fontSize = 25;
             }
+            for (int i = 0; i < chatBox.TextLength; i++)
+            {
+                chatBox.Select(i, 1);
+                chatBox.SelectionFont = new Font(chatBox.SelectionFont.FontFamily, fontSize);
 
-            Debug.WriteLine(fontSize);
+            }
+            //Debug.WriteLine(fontSize);
             averageFontSize = fontSize;
         }
 
@@ -164,9 +176,11 @@ namespace ChatSqlServer
         {
         
             resizeFont();
-            fillTextBox(true);
-            chatBox.Select(chatBox.TextLength, 1);
+            //fillTextBox(true);
+            Debug.WriteLine(chatBox.AutoScrollOffset);
+            chatBox.Select(chatBox.TextLength, 0);
             chatBox.ScrollToCaret();
+          
         }
 
         private void Form1_DragDrop(object sender, DragEventArgs e)
@@ -174,10 +188,11 @@ namespace ChatSqlServer
             if (e.Data.GetDataPresent(DataFormats.FileDrop)) e.Effect = DragDropEffects.Copy;
             
         }
-
+        DateTime lastDrop = DateTime.Now;
         private void Form1_DragEnter(object sender, DragEventArgs e)
         {
-            if (!Model.Self.Connect()) return;
+            //у ивента по умолчанию нет никакого ограничения по веремни, так что он срабатывает по несколько раз
+            if (!Model.Self.Connect() || lastDrop + new TimeSpan(0, 0, 0, 0, 500) > DateTime.Now) return;
 
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
             //прохожусь по путям файлов, которые перетащил пользователь и для каждого пути отправляю
@@ -187,8 +202,13 @@ namespace ChatSqlServer
                 if (File.Exists(file))
                 {
                     byte[] blob = File.ReadAllBytes(file);
-                    Model.Self.sendMessage(new Message(" ", user, new FileModel(blob, 0)));
+                    lastMessagesSize = messages.Count;
+                    messages.Add(Model.Self.sendMessage(new Message(" ", user, new FileModel(blob, 0))));
                 }
+            }
+            if(files.Length != 0)
+            {
+                fillTextBox(false);
             }
         }
 
@@ -200,6 +220,14 @@ namespace ChatSqlServer
             {
                 linkedFileName = fd.FileName;
             }
+        }
+
+        private void chatBox_Enter(object sender, EventArgs e)
+        {
+            //поскольку я не могу сделать richtextbox readonly, т.к. для вставки картинок используется
+            //clipboard, то мне нужно как-то иначе не дать пользователю вводить сюда данные, так что я просто
+            //меняю фокус на другой элемент
+            button1.Focus();
         }
     }
 }

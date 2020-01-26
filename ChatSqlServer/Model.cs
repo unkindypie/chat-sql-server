@@ -14,14 +14,17 @@ namespace ChatSqlServer
     {
         SqlConnection connection = new SqlConnection();
         SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+        public string address = "";
         static Model self = null;
         protected Model()
         {
-            builder.DataSource = @"DESKTOP-6DIF51U\SQL_S2";
+            //builder.DataSource = @"DESKTOP-6DIF51U\SQL_S2";
+            builder.DataSource = @"DESKTOP-CJ4FN0M";
             builder.InitialCatalog = @"chat";
             builder.UserID = @"sa";
             builder.Password = @"baddev02";
             connection.ConnectionString = builder.ConnectionString;
+            address = builder.DataSource.ToString();
         }
         public static Model Self
         {

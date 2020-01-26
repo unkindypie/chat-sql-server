@@ -19,3 +19,14 @@ C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.csproj.
 C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.csproj.CoreCompileInputs.cache
 C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.exe
 C:\Users\Max\Desktop\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.pdb
+C:\Users\Fullmetal\Downloads\ChatSqlServer\ChatSqlServer\bin\Debug\ChatSqlServer.exe.config
+C:\Users\Fullmetal\Downloads\ChatSqlServer\ChatSqlServer\bin\Debug\ChatSqlServer.exe
+C:\Users\Fullmetal\Downloads\ChatSqlServer\ChatSqlServer\bin\Debug\ChatSqlServer.pdb
+C:\Users\Fullmetal\Downloads\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.csprojAssemblyReference.cache
+C:\Users\Fullmetal\Downloads\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.Form1.resources
+C:\Users\Fullmetal\Downloads\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.Login.resources
+C:\Users\Fullmetal\Downloads\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.Properties.Resources.resources
+C:\Users\Fullmetal\Downloads\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.csproj.GenerateResource.cache
+C:\Users\Fullmetal\Downloads\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.csproj.CoreCompileInputs.cache
+C:\Users\Fullmetal\Downloads\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.exe
+C:\Users\Fullmetal\Downloads\ChatSqlServer\ChatSqlServer\obj\Debug\ChatSqlServer.pdb
